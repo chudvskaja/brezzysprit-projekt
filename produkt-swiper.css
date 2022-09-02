@@ -1,0 +1,105 @@
+/*?--------------------------------------------------------------?*\
+......................... MOBILE VERSION .........................
+/*?--------------------------------------------------------------?*/
+
+/*!==========  PRODUKT STYLING START  ===========!*/
+
+.produkt-left-container {
+  display: none;
+}
+
+/* product container */
+.product-container {
+  position: relative;
+  justify-content: center;
+  place-content: center;
+  margin: 0 auto;
+  max-width: 1140px;
+  width: 100%;
+  height: min(100vh);
+  background-color: #fff;
+  overflow: hidden;
+}
+
+/* card container */
+.custom-swiper {
+  width: 100%;
+  height: 100vh;
+}
+
+/* swiper box*/
+.swiper {
+  max-width: 390px;
+  width: 100%;
+  height: 100vh;
+}
+
+/* swiper slide active */
+.swiper-slide.swiper-slide-active .swiper-top {
+  transform: scale(1);
+  transition: 0;
+  border: 0;
+}
+
+/* card top box */
+.swiper-top {
+  width: 100%;
+  height: 100vh;
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  border-radius: 0;
+}
+
+/* product image */
+.swiper-image {
+  height: 100%;
+  bottom: 0;
+  border-radius: 0;
+}
+
+/* pagination box */
+.swiper-custom-pagination {
+  position: absolute;
+  width: fit-content !important;
+  bottom: -10px !important;
+  left: 0 !important;
+  z-index: 1;
+}
+
+/* pagination bullet */
+.swiper-pagination-bullet {
+  position: relative;
+  width: 15px;
+  height: 15px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: transparent;
+  margin: 0 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 500ms ease-in;
+}
+/* pagination bullet active */
+.swiper-pagination-bullet-active {
+  background-color: var(--clr-hover);
+  width: 40px;
+  border-radius: 50px;
+}
+
+/*!===========  PRODUKT STYLING END  ============!*/
+
+/*?--------------------------------------------------------------?*\
+......................... DESKTOP VERSION .........................
+/*?--------------------------------------------------------------?*/
+
+@media (min-width: 1140px) {
+  /*!==========  PRODUKT STYLING START  ===========!*/
+
+  .produkt-left-container {
+    display: flex;
+  }
+
+  .custom-swiper {
+    display: none;
+  }
+
+  /*!===========  PRODUKT STYLING END  ============!*/
+}

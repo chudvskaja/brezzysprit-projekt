@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Praxis</title>
+    <link rel="icon" type="image/svg" href="images/BrezzySprit-logo.svg" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="produkt-swiper.css" />
+  </head>
+  <body>
+    <!-- !========== NAVBAR SECTION START ==========! -->
+
+    <nav class="navbar" id="navbar">
+      <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+
+      <a href="index.html"
+        ><img class="nav-logo" src="./images/logo/BrezzySprit-logo-white.svg" alt="logo"
+      /></a>
+
+      <ul class="nav-menu">
+        <li class="nav-item">
+          <a href="index.html#produkt" class="nav-link active">Produkter</a>
+        </li>
+        <li class="nav-item nav-hidden">
+          <a href="index.html#kvalitet" class="nav-link">Kvaliteter</a>
+        </li>
+        <li class="nav-item nav-hidden">
+          <a href="index.html#om-os" class="nav-link">Om os</a>
+        </li>
+        <li class="nav-item"><a href="#kontakt" class="nav-link">Kontakt</a></li>
+      </ul>
+
+      <div class="nav-icons">
+        <i class="fa-solid fa-bag-shopping" style="font-size: 20px"></i>
+        <i class="fa-solid fa-magnifying-glass" style="font-size: 20px"></i>
+      </div>
+    </nav>
+
+    <!-- !=========== NAVBAR SECTION END ===========! -->
+
+    <!-- !=========== PRODUKT SIDE SECTION START ===========! -->
+
+    <section class="produkt-side">
+      <div class="produkt-side-container">
+        <div class="produkt-left-container">
+          <div class="side-billeder">
+            <img
+              src="images/product-card-images/appelsin.jpg"
+              alt=""
+              class="side-billede"
+              loading="lazy"
+            />
+            <img
+              src="images/produkt-images/appelsin4.jpg"
+              alt=""
+              class="side-billede"
+              loading="lazy"
+            />
+            <img
+              src="images/produkt-images/appelsin5.jpg"
+              alt=""
+              class="side-billede"
+              loading="lazy"
+            />
+            <img
+              src="images/produkt-images/appelsin6.jpg"
+              alt=""
+              class="side-billede"
+              loading="lazy"
+            />
+          </div>
+          <div class="fokus-billede">
+            <img
+              src="images/produkt-images/appelsin1.jpg"
+              alt=""
+              class="stor-billede"
+              loading="lazy"
+            />
+          </div>
+        </div>
+
+        <div class="custom-swiper">
+          <div class="custom-swiper-wrapper">
+            <!-- Slider main container -->
+            <div class="swiper">
+              <!-- Additional required wrapper -->
+              <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                  <div class="swiper-top">
+                    <img
+                      class="swiper-image"
+                      src="images/produkt-images/appelsin1.jpg"
+                      alt="image for image-slider"
+                      loading="lazy"
+                    />
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="swiper-top">
+                    <img
+                      class="swiper-image"
+                      src="images/produkt-images/appelsin4.jpg"
+                      alt="image for image-slider"
+                      loading="lazy"
+                    />
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="swiper-top">
+                    <img
+                      class="swiper-image"
+                      src="images/produkt-images/appelsin5.jpg"
+                      alt="image for image-slider"
+                      loading="lazy"
+                    />
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="swiper-top">
+                    <img
+                      class="swiper-image"
+                      src="images/produkt-images/appelsin6.jpg"
+                      alt="image for image-slider"
+                      loading="lazy"
+                    />
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="swiper-top">
+                    <img
+                      class="swiper-image"
+                      src="images/product-card-images/appelsin.jpg"
+                      alt="image for image-slider"
+                      loading="lazy"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- If we need pagination -->
+          <div class="swiper-custom-pagination"></div>
+        </div>
+
+        <div class="produkt-right-container">
+          <div class="inner-left">
+            <h1 class="top-title">Desinficerende håndsprit</h1>
+            <p class="top-text">
+              Fugtende håndsprit med glycerin og appelsinduft (500ml)
+            </p>
+            <div class="produkt-review">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star-half-stroke"></i>
+              <p class="reviews-amount">364 reviews</p>
+            </div>
+
+            <div class="dufte-box" id="myDuft">
+              <a href="produkt-appelsin.html" class="duft is-active"></a>
+              <a href="produkt-citron.html" class="duft"></a>
+              <a href="produkt-frisk.html" class="duft"></a>
+              <a href="produkt-lakrids.html" class="duft"></a>
+              <a href="produkt-mynte.html" class="duft"></a>
+              <a href="produkt-vandmelon.html" class="duft"></a>
+              <a href="produkt-æble.html" class="duft"></a>
+            </div>
+
+            <p class="duft-beskrivelse">
+              <span>Appelsin -</span> Et rent og forfriskende duft af appelsin med
+              glycerin som modvirker udtørring af hænderne.
+            </p>
+            <p class="funktion-beskrivelse">
+              <span>Perfekt til -</span> At øge hygiejne og forebygge smittespredning, men
+              stadig sørge for at dufte godt.
+            </p>
+          </div>
+          <div class="inner-right">
+            <p class="godkendt">
+              Hudlæge testet. 70% Ethylalkohol. FDA-kompatibel. Glutenfri.
+            </p>
+
+            <div class="bestilling">
+              <div class="antal">
+                <button id="decrement">-</button>
+                <div id="number">1</div>
+                <button id="increment">+</button>
+              </div>
+
+              <div class="kurv-knap">
+                <p class="kurv-text">Tilføj til kurv <span>-</span></p>
+                <p class="kurv-pris">10kr</p>
+              </div>
+            </div>
+
+            <div class="dropdown-bars">
+              <!-- Bar 1 -->
+              <div class="dropdown-menu">
+                <button class="dropdown-bar">
+                  <p class="bar-text">Funktionelle ingredienser</p>
+                  <i class="fa-solid fa-plus"></i>
+                </button>
+                <div class="dropdown-box" id="myDropdown">
+                  <!-- Box 1 -->
+                  <div class="kvalitet-kasse">
+                    <img
+                      src="images/water-drop.png"
+                      alt="quality image"
+                      class="kvalitet-billede"
+                      loading="lazy"
+                    />
+                    <div class="kvalitet-kasse-tekst">
+                      <p class="kvalitet-navn">Ætanol</p>
+                      <p class="kvalitet-beskrivelse">
+                        Dræber 99.99% af de mest almindelige bakterier.
+                      </p>
+                    </div>
+                  </div>
+                  <!-- Box 2 -->
+                  <div class="kvalitet-kasse">
+                    <img
+                      src="images/aloe-vera.png"
+                      alt="quality image"
+                      class="kvalitet-billede"
+                      loading="lazy"
+                    />
+                    <div class="kvalitet-kasse-tekst">
+                      <p class="kvalitet-navn">Alo vera</p>
+                      <p class="kvalitet-beskrivelse">Fugter uden at føles fedtet.</p>
+                    </div>
+                  </div>
+                  <!-- Box 3 -->
+                  <div class="kvalitet-kasse">
+                    <img
+                      src="images/fermant.png"
+                      alt="quality image"
+                      class="kvalitet-billede"
+                      loading="lazy"
+                    />
+                    <div class="kvalitet-kasse-tekst">
+                      <p class="kvalitet-navn">Rædjerod gæring</p>
+                      <p class="kvalitet-beskrivelse">
+                        Giver bredspektret antimikrobiel beskyttelse.
+                      </p>
+                    </div>
+                  </div>
+                  <!-- Box 4 -->
+                  <div class="kvalitet-kasse">
+                    <img
+                      src="images/oil.png"
+                      alt="quality image"
+                      class="kvalitet-billede"
+                      loading="lazy"
+                    />
+                    <div class="kvalitet-kasse-tekst">
+                      <p class="kvalitet-navn">Citron æterisk olie</p>
+                      <p class="kvalitet-beskrivelse">Nærer og renser huden.</p>
+                    </div>
+                  </div>
+
+                  <p class="bottom-list">Se den fulde liste over ingredienser</p>
+                </div>
+              </div>
+              <!-- Bar 2 -->
+              <div class="dropdown-menu">
+                <button class="dropdown-bar">
+                  <p class="bar-text">Vejledning</p>
+                  <i class="fa-solid fa-plus"></i>
+                </button>
+                <div class="dropdown-box">
+                  <ol class="guide-list">
+                    <li class="guide-text">
+                      <p class="list-text">Hæld en smule ud i hænderne</p>
+                    </li>
+                    <li class="guide-text">
+                      <p class="list-text">
+                        Gnid hænderne mod hinanden, som ved håndvask
+                      </p>
+                    </li>
+                    <li class="guide-text">
+                      <p class="list-text">Skyl ikke efter med vand</p>
+                    </li>
+                    <li class="guide-text">
+                      <p class="list-text">
+                        Kan evt. påfyldes i beholder med pumpe for mere optimal dosering
+                      </p>
+                    </li>
+                  </ol>
+                  <p class="warning">Advarsel mod oralt indtag!</p>
+                </div>
+              </div>
+              <!-- Bar 3 -->
+              <div class="dropdown-menu">
+                <button class="dropdown-bar">
+                  <p class="bar-text">Fordele</p>
+                  <i class="fa-solid fa-plus"></i>
+                </button>
+                <div class="dropdown-box">
+                  <div class="fordele-box">
+                    <p class="fordel">
+                      <span>Hygiejne -</span> Vores hænder er den største smittekilde vi
+                      har. Med hyppig håndvask og hånddesinfektion kan du øge hygiejnen og
+                      forebygge smittespredning.
+                    </p>
+                    <p class="fordel">
+                      <span>Effektiv -</span> Når risikoen for overførsel af bakterier og
+                      vira skal mindskes, er en alkoholbaseret hånddesinfektion
+                      dokumenteret effektiv.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- !============ PRODUKT SIDE SECTION END ============! -->
+
+    <!-- !========== FOOTER SECTION START ==========! -->
+
+    <footer id="kontakt">
+      <div class="desktop-footer">
+        <div class="footer-contacs">
+          <img
+            class="footer-logo"
+            src="images/logo/BrezzySprit-logo-white.svg"
+            alt="logo"
+          />
+          <address class="footer-text">
+            BREEZYSPRIT A/S <br />
+            Viborgvej 1 <br />
+            +45 12 34 56 78 <br />
+          </address>
+          <p class="footer-text">Du kan finde os på</p>
+          <ul class="social-media">
+            <li>
+              <a href="https://instagram.com">
+                <i class="fa-brands fa-instagram" style="font-size: 28px"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://facebook.com">
+                <i class="fa-brands fa-facebook" style="font-size: 28px"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://youtube.com">
+                <i class="fa-brands fa-youtube" style="font-size: 34px"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <ul class="footer-links">
+          <li class="footer-link"><a href="index.html#header">Home</a></li>
+          <li class="footer-link"><a href="index.html#produkt">Shop nu</a></li>
+          <li class="footer-link"><a href="index.html#kvalitet">Kvaliteter</a></li>
+          <li class="footer-link"><a href="index.html#om-os">Om os</a></li>
+        </ul>
+        <div class="desktop-form">
+          <p class="participate-text">
+            Tilmeld dig her for at opdage alle vores <br class="tilmeld" />
+            nyheder, kampagner,<br class="desktop-tilmeld" />
+            rabatter og andre gode ting.
+          </p>
+          <form>
+            <div class="desktop-input">
+              <input type="email" id="email" name="email" value="Din Email*" />
+              <button class="submit-btn desktop" type="submit">Abonnere</button>
+            </div>
+            <div class="submit-form">
+              <div class="checkbox-agreement">
+                <input type="checkbox" name="agreement" id="checkbox" />
+                <p class="agreement-text">
+                  Jeg har læst og accepterer <br class="accept" />
+                  fortrolighedspolitikken
+                </p>
+              </div>
+              <button class="submit-btn mobile" type="submit">Abonnere</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <hr class="white-line" />
+      <div class="desktop-copyright">
+        <p class="copyright desktop">BreezySprit, All rights reserved, 2022.</p>
+        <ul class="handelsbetingelser-links">
+          <li><a href=""></a>Handelsbetingelser</li>
+          <li><a href=""></a>Data og privatlivpolitik</li>
+          <li><a href=""></a>Kontakt os</li>
+        </ul>
+        <p class="copyright mobile">BreezySprit, All rights reserved, 2022.</p>
+      </div>
+    </footer>
+
+    <!-- !=========== FOOTER SECTION END ===========! -->
+
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/0518abe1b3.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="produkt-swiper.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

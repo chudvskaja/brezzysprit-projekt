@@ -1,12 +1,443 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Praxis</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <link rel="icon" type="image/svg" href="images/BrezzySprit-logo.svg" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- !========== NAVBAR SECTION START ==========! -->
+
+    <nav class="navbar" id="navbar">
+      <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+
+      <a href="index.html"
+        ><img class="nav-logo" src="./images/logo/BrezzySprit-logo-white.svg" alt="logo"
+      /></a>
+
+      <ul class="nav-menu">
+        <li class="nav-item"><a href="#produkt" class="nav-link active">Produkter</a></li>
+        <li class="nav-item nav-hidden">
+          <a href="#kvalitet" class="nav-link">Kvaliteter</a>
+        </li>
+        <li class="nav-item nav-hidden"><a href="#om-os" class="nav-link">Om os</a></li>
+        <li class="nav-item"><a href="#kontakt" class="nav-link">Kontakt</a></li>
+      </ul>
+
+      <div class="nav-icons">
+        <i class="fa-solid fa-bag-shopping" style="font-size: 20px"></i>
+        <i class="fa-solid fa-magnifying-glass" style="font-size: 20px"></i>
+      </div>
+    </nav>
+
+    <!-- !=========== NAVBAR SECTION END ===========! -->
+
+    <!-- !========== HEADER SECTION START ==========! -->
+
+    <header class="header" id="header">
+      <div class="header-text">
+        <div class="header--text-container">
+          <h1 class="header-title">Feel the breeze</h1>
+          <a href="#produkt" class="header-btn">Shop nu</a>
+        </div>
+      </div>
+
+      <div class="sletknap" id="sletknap">
+        <button class="tilmelding" onclick="window.location.href='tilmelding.html'">
+          Tilmeld dig
+        </button>
+        <button class="lukning" onclick="removeDiv()">
+          <i class="fa-solid fa-x"></i>
+        </button>
+      </div>
+
+      <div class="header-bg">
+        <div class="header-dv">
+          <img
+            class="h-img-dv fade"
+            src="images/nature-images/DV-header-img1.jpg"
+            alt="header image desktop"
+          />
+          <img
+            class="h-img-dv fade"
+            src="images/nature-images/DV-header-img2.jpg"
+            alt="header image desktop"
+          />
+        </div>
+        <img
+          class="h-img-mv"
+          src="images/nature-images/MV-header-img1.jpg"
+          alt="header image mobile"
+        />
+      </div>
+    </header>
+
+    <!-- !=========== HEADER SECTION END ===========! -->
+
+    <!-- !========== INFO SECTION START ==========! -->
+
+    <section class="intro">
+      <div class="intro-box">
+        <h2 class="intro-title">Hånddesinfektion med duft</h2>
+        <p class="intro-text">
+          BreezySprit er en destination for dufteelskere - de mennesker, der elsker duften
+          af søde frugter og livet i naturen - dem, der gerne går op i hygiejne, men også
+          vil dufte godt.
+        </p>
+      </div>
+    </section>
+
+    <!-- !=========== INFO SECTION END ===========! -->
+
+    <!-- !========== PRODUKT SECTION START ==========! -->
+
+    <section class="product-container" id="produkt">
+      <div>
+        <h1 class="product-title">Mød duftende håndsprit</h1>
+        <p class="product-text">
+          Vi har 7 frisk duftende sprit, så du kan blive beskyttet, frisk og desinficeret
+          med fornøjelsen af din valgte duft.
+        </p>
+      </div>
+
+      <div class="custom-swiper">
+        <div class="custom-swiper-wrapper">
+          <!-- Slider main container -->
+          <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide">
+                <div class="swiper-top">
+                  <a href="produkt-appelsin.html">
+                    <img
+                      class="swiper-image"
+                      src="images/product-card-images/appelsin.jpg"
+                      alt="image for image-slider"
+                      loading="lazy"
+                    />
+                  </a>
+                </div>
+                <div class="swiper-bottom">
+                  <p class="product-name">Appelsin</p>
+                  <a href="" class="basket-btn">
+                    <p>Tilføj til kurv</p>
+                    <p>10kr</p>
+                  </a>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="swiper-top">
+                  <a href="produkt-citron.html">
+                    <img
+                      class="swiper-image"
+                      src="images/product-card-images/citron.jpg"
+                      alt="image for image-slider"
+                      loading="lazy"
+                    />
+                  </a>
+                </div>
+                <div class="swiper-bottom">
+                  <p class="product-name">Citron</p>
+                  <a href="" class="basket-btn">
+                    <p>Tilføj til kurv</p>
+                    <p>10kr</p>
+                  </a>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="swiper-top">
+                  <a href="produkt-frisk.html">
+                    <img
+                      class="swiper-image"
+                      src="images/product-card-images/frisk.jpg"
+                      alt="image for image-slider"
+                      loading="lazy"
+                    />
+                  </a>
+                </div>
+                <div class="swiper-bottom">
+                  <p class="product-name">Frisk</p>
+                  <a href="" class="basket-btn">
+                    <p>Tilføj til kurv</p>
+                    <p>10kr</p>
+                  </a>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="swiper-top">
+                  <a href="produkt-lakrids.html">
+                    <img
+                      class="swiper-image"
+                      src="images/product-card-images/lakrids.jpg"
+                      alt="image for image-slider"
+                      loading="lazy"
+                    />
+                  </a>
+                </div>
+                <div class="swiper-bottom">
+                  <p class="product-name">Lakrids</p>
+                  <a href="" class="basket-btn">
+                    <p>Tilføj til kurv</p>
+                    <p>10kr</p>
+                  </a>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="swiper-top">
+                  <a href="produkt-mynte.html">
+                    <img
+                      class="swiper-image"
+                      src="images/product-card-images/mynte.jpg"
+                      alt="image for image-slider"
+                      loading="lazy"
+                    />
+                  </a>
+                </div>
+                <div class="swiper-bottom">
+                  <p class="product-name">Mynte</p>
+                  <a href="" class="basket-btn">
+                    <p>Tilføj til kurv</p>
+                    <p>10kr</p>
+                  </a>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="swiper-top">
+                  <a href="produkt-vandmelon.html">
+                    <img
+                      class="swiper-image"
+                      src="images/product-card-images/vandmelon.jpg"
+                      alt="image for image-slider"
+                      loading="lazy"
+                    />
+                  </a>
+                </div>
+                <div class="swiper-bottom">
+                  <p class="product-name">Vandmelon</p>
+                  <a href="" class="basket-btn">
+                    <p>Tilføj til kurv</p>
+                    <p>10kr</p>
+                  </a>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="swiper-top">
+                  <a href="produkt-æble.html">
+                    <img
+                      class="swiper-image"
+                      src="images/product-card-images/able.jpg"
+                      alt="image for image-slider"
+                      loading="lazy"
+                    />
+                  </a>
+                </div>
+                <div class="swiper-bottom">
+                  <p class="product-name">Æble</p>
+                  <a href="" class="basket-btn">
+                    <p>Tilføj til kurv</p>
+                    <p>10kr</p>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-custom-pagination"></div>
+      </div>
+    </section>
+
+    <!-- !=========== PRODUKT SECTION END ===========! -->
+
+    <!-- !========== KVALITET SECTION START ==========! -->
+
+    <section class="kvalitet" id="kvalitet">
+      <h1 class="kvalitet-title">Kvaliteter</h1>
+
+      <div class="kvalitet-container">
+        <!-- Box 1 -->
+        <div class="kvalitet-box">
+          <img
+            src="images/water-drop.png"
+            alt="quality image"
+            class="kvalitet-image"
+            loading="lazy"
+          />
+          <p class="kvalitet-name">Ætanol</p>
+          <p class="kvalitet-text">Dræber 99.99% af de mest almindelige bakterier.</p>
+        </div>
+        <!-- Box 2 -->
+        <div class="kvalitet-box">
+          <img
+            src="images/aloe-vera.png"
+            alt="quality image"
+            class="kvalitet-image"
+            loading="lazy"
+          />
+          <p class="kvalitet-name">Alo vera</p>
+          <p class="kvalitet-text">Fugter uden at føles fedtet.</p>
+        </div>
+        <!-- Box 3 -->
+        <div class="kvalitet-box">
+          <img
+            src="images/fermant.png"
+            alt="quality image"
+            class="kvalitet-image"
+            loading="lazy"
+          />
+          <p class="kvalitet-name">Rædjerod gæring</p>
+          <p class="kvalitet-text">Giver bredspektret antimikrobiel beskyttelse.</p>
+        </div>
+        <!-- Box 4 -->
+        <div class="kvalitet-box">
+          <img
+            src="images/oil.png"
+            alt="quality image"
+            class="kvalitet-image"
+            loading="lazy"
+          />
+          <p class="kvalitet-name">Citron æterisk olie</p>
+          <p class="kvalitet-text">Nærer og renser huden.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- !=========== KVALITET SECTION END ===========! -->
+
+    <!-- !========== OM OS SECTION START ==========! -->
+
+    <section class="about-us" id="om-os">
+      <div class="about-us-container">
+        <div class="row">
+          <div class="about-photo">
+            <img src="./images/selfie2.jpg" alt="our team" loading="lazy" />
+          </div>
+          <div class="about-description">
+            <h2 class="about-title">Hvem er vi?</h2>
+            <p class="about-text">
+              Vi er en gruppe af 3 personer, og har lavet BreezySprit, som er håndsprit
+              med dufte, hvilket gør håndsprit mere interessant og så er vores design mere
+              farverig og anderledes. Vi synes håndsprit er kedelig og lugter af alkohol,
+              og derfor kom vi med ideen om håndsprit, som skulle komme i forskellige
+              dufte, og dermed gøre duften og designet mere forfriskende, som en brise,
+              derfor valgte vi navnet BreezySprit.
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="product-description">
+            <h2 class="about-title">Vores produkt</h2>
+            <p class="about-text">
+              Vi har valgt at vi vil lave en desinficerende håndsprit, som skal komme i
+              forskellige dufte, og gøre håndsprit mere end bare sprit der står ved
+              indgangen på hospitalet, lægen, osv. Ideen bag vores produkt er at det skal
+              være mere end bare desinficerende, men også en behagelig væske for dine
+              hænder, som skal hjælpe med at gøre dine hænder fugtige, bløde og duftende.
+            </p>
+          </div>
+          <div class="about-photo">
+            <img src="./images/produkt.jpg" alt="product image" loading="lazy" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- !=========== OM OS SECTION END ===========! -->
+
+    <!-- !========== FOOTER SECTION START ==========! -->
+
+    <footer id="kontakt">
+      <div class="desktop-footer">
+        <div class="footer-contacs">
+          <img
+            class="footer-logo"
+            src="images/logo/BrezzySprit-logo-white.svg"
+            alt="logo"
+          />
+          <address class="footer-text">
+            BREEZYSPRIT A/S <br />
+            Viborgvej 1 <br />
+            +45 12 34 56 78 <br />
+          </address>
+          <p class="footer-text">Du kan finde os på</p>
+          <ul class="social-media">
+            <li>
+              <a href="https://instagram.com">
+                <i class="fa-brands fa-instagram" style="font-size: 28px"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://facebook.com">
+                <i class="fa-brands fa-facebook" style="font-size: 28px"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://youtube.com">
+                <i class="fa-brands fa-youtube" style="font-size: 34px"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <ul class="footer-links">
+          <li class="footer-link"><a href="#header">Home</a></li>
+          <li class="footer-link"><a href="#produkt">Shop nu</a></li>
+          <li class="footer-link"><a href="#kvalitet">Kvaliteter</a></li>
+          <li class="footer-link"><a href="#om-os">Om os</a></li>
+        </ul>
+        <div class="desktop-form">
+          <p class="participate-text">
+            Tilmeld dig her for at opdage alle vores <br class="tilmeld" />
+            nyheder, kampagner,<br class="desktop-tilmeld" />
+            rabatter og andre gode ting.
+          </p>
+          <form>
+            <div class="desktop-input">
+              <input type="email" id="email" name="email" value="Din Email*" />
+              <button class="submit-btn desktop" type="submit">Abonnere</button>
+            </div>
+            <div class="submit-form">
+              <div class="checkbox-agreement">
+                <input type="checkbox" name="agreement" id="checkbox" />
+                <p class="agreement-text">
+                  Jeg har læst og accepterer <br class="accept" />
+                  fortrolighedspolitikken
+                </p>
+              </div>
+              <button class="submit-btn mobile" type="submit">Abonnere</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <hr class="white-line" />
+      <div class="desktop-copyright">
+        <p class="copyright desktop">BreezySprit, All rights reserved, 2022.</p>
+        <ul class="handelsbetingelser-links">
+          <li><a href=""></a>Handelsbetingelser</li>
+          <li><a href=""></a>Data og privatlivpolitik</li>
+          <li><a href=""></a>Kontakt os</li>
+        </ul>
+        <p class="copyright mobile">BreezySprit, All rights reserved, 2022.</p>
+      </div>
+    </footer>
+
+    <!-- !=========== FOOTER SECTION END ===========! -->
+
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/0518abe1b3.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="goit.js"></script>
+    <script src="script.js"></script>
+   
+  </body>
 </html>

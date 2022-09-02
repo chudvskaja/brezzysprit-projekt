@@ -1,0 +1,1519 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@100;200;300;400;500;600;700;800;900&family=Merienda+One&display=swap");
+
+:root {
+  --clr-primary: #007f5f;
+  --clr-sand: #f3dfc1;
+  --clr-hover: #f18805;
+  --clr-txt-hover: #f0a202;
+
+  --duft-appelsin: linear-gradient(45deg, #d18500, #f6b84e);
+  --duft-citron: linear-gradient(45deg, #d9a71f, #e9dd18);
+  --duft-frisk: linear-gradient(45deg, #032e68, #60a5d0);
+  --duft-lakrids: linear-gradient(45deg, #000000, #3b2213);
+  --duft-mynte: linear-gradient(45deg, #086435, #03ae56);
+  --duft-vandmelon: linear-gradient(45deg, #668938, #b90010);
+  --duft-æble: linear-gradient(45deg, #116232, #a8bf2f);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Barlow", Arial, Helvetica, sans-serif;
+  color: #fff;
+  background-color: #fff;
+  margin: 0 auto;
+  overflow-x: hidden;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+/*?--------------------------------------------------------------?*\
+......................... MOBILE VERSION .........................
+/*?--------------------------------------------------------------?*/
+
+/*!==========  NAVBAR STYLING START  ===========!*/
+
+.navbar {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 8vh;
+  padding: 10px 20px;
+  top: 0;
+  right: 0;
+  left: 0;
+  background-color: #000;
+  z-index: 99999;
+}
+
+.nav-menu {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  place-content: center;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: -100%;
+  background-color: var(--clr-sand);
+  transition: 0.3s ease-out;
+}
+
+.nav-menu.active {
+  left: 0;
+}
+
+.nav-item {
+  margin: 2rem 0;
+}
+
+.nav-link {
+  font-size: 3.5rem;
+  font-weight: 500;
+  margin: 3vw;
+  text-transform: uppercase;
+}
+
+.nav-hidden {
+  display: none;
+}
+
+.nav-logo {
+  position: relative;
+  margin: 0 auto;
+  width: 6.5rem;
+}
+
+.nav-icons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.hamburger {
+  position: relative;
+  display: block;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: translate(0px, 0px) rotate(45deg);
+  background-color: var(--clr-hover);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+  transform: translateX(15px);
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: translate(-3px, 1px) rotate(-45deg);
+  background-color: var(--clr-hover);
+}
+
+.bar {
+  display: block;
+  width: 30px;
+  height: 5px;
+  margin: 5px auto;
+  border-radius: 50px;
+  background-color: #fff;
+  transform-origin: 0 0;
+  transition: 0.4s ease;
+}
+
+/*!===========  NAVBAR STYLING END  ============!*/
+
+/*!===========  HEADER STYLING START  ============!*/
+
+.header {
+  position: relative;
+  min-width: 100%;
+}
+
+.header-bg {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+.header-dv {
+  display: none;
+}
+
+.h-img-mv {
+  position: absolute;
+  min-width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 99;
+  filter: brightness(60%);
+}
+
+/**********? HEADER TEXT ?**********/
+
+.header-text {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  min-width: 100%;
+  min-height: 100vh;
+  color: #fff;
+  z-index: 1001;
+}
+
+.header--text-container {
+  position: absolute;
+  display: grid;
+  place-items: center;
+  top: 40%;
+}
+
+.header-title {
+  position: relative;
+  width: 100%;
+  font-family: "Merienda one", Arial, Helvetica, sans-serif;
+  font-size: 6rem;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -150%);
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.header-btn {
+  position: absolute;
+  display: grid;
+  place-content: center;
+  width: 140px;
+  height: 50px;
+  font-size: 2rem;
+  font-weight: 600;
+  background-color: #fff;
+  color: #000;
+  text-transform: uppercase;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+#sletknap {
+  position: fixed;
+  width: 130px;
+  height: 50px;
+  bottom: 2%;
+  right: 2%;
+  z-index: 100;
+}
+
+.tilmelding {
+  position: absolute;
+  width: 120px;
+  height: 40px;
+  font-size: 1.7rem;
+  bottom: 0;
+  border: none;
+  cursor: pointer;
+}
+
+.tilmeldt-box {
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 5rem;
+}
+
+.tilmeldt-titel {
+  display: flex;
+  justify-content: center;
+  margin: 5rem auto;
+  width: 100%;
+  font-size: 3rem;
+  color: #000;
+  text-transform: uppercase;
+}
+
+.tilmeldt-text {
+  display: flex;
+  max-width: 558px;
+  width: 100%;
+  font-size: 2rem;
+  color: #000;
+  margin: 4rem auto;
+}
+
+.tilmeldt-btn {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 80px;
+  height: 35px;
+  background-color: #000;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  border-radius: 10px;
+}
+
+.tilmeldt-btn-text {
+  font-size: 1.3rem;
+  font-weight: 300;
+  color: #000;
+  margin-top: 1rem;
+}
+
+.lukning {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: #5bba6f;
+  padding-bottom: 4px;
+  top: 0;
+  right: 0;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+}
+
+.lukning .fa-solid.fa-x {
+  font-size: 1rem;
+}
+
+/*!============  HEADER STYLING END  =============!*/
+
+/*!============  INTRO STYLING START  =============!*/
+
+.intro {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: var(--clr-primary);
+}
+
+.intro-box {
+  position: relative;
+  display: grid;
+  place-items: center;
+  max-width: 1140px;
+  width: 100%;
+}
+
+.intro-title {
+  font-family: "Merienda One", Arial, Helvetica, sans-serif;
+  font-size: 2.5rem;
+  text-align: center;
+  width: min-content;
+  padding: 40px 0 30px 0;
+  text-transform: uppercase;
+}
+
+.intro-text {
+  font-size: 1.8rem;
+  font-weight: 300;
+  text-align: center;
+  padding: 0 0 40px 0;
+  width: 340px;
+}
+
+/*!=============  INTRO STYLING END  ==============!*/
+
+/*!==========  PRODUKT STYLING START  ===========!*/
+
+/* product container */
+.product-container {
+  position: relative;
+  justify-content: center;
+  place-content: center;
+  margin: 0 auto;
+  max-width: 1140px;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #fff;
+  overflow: hidden;
+}
+
+/* product title */
+.product-title {
+  font-family: "Merienda One", Arial, Helvetica, sans-serif;
+  font-size: 30px;
+  text-align: center;
+  margin: 30px auto 20px auto;
+  color: var(--clr-primary);
+  text-transform: uppercase;
+  word-wrap: break-word;
+  width: 350px;
+}
+
+/* product text */
+.product-text {
+  font-size: 20px;
+  font-weight: 200;
+  margin: 0 auto 50px auto;
+  color: #505050;
+  text-align: center;
+  word-wrap: break-word;
+  width: 310px;
+}
+
+/* card container */
+.custom-swiper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* card wrapper */
+.custom-swiper-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* swiper box*/
+.swiper {
+  width: 270px;
+  height: 100%;
+  border-radius: 20px;
+  overflow: visible;
+}
+
+/* card box */
+.swiper-slide {
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 5em;
+}
+
+/* swiper slide active */
+.swiper-slide.swiper-slide-active .swiper-top {
+  transform: scale(1.04);
+  transition: 0.3s ease;
+  border: 2px solid var(--clr-hover);
+}
+
+/* card top box */
+.swiper-top {
+  width: 270px;
+  height: 350px;
+  border-radius: 20px;
+  box-shadow: 0 0 15px -2px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+
+/* product image */
+.swiper-image {
+  position: relative;
+  width: 100%;
+  object-fit: cover;
+  bottom: 25%;
+  border-radius: 20px;
+}
+
+/* card bottom box */
+.swiper-bottom {
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* product name */
+.product-name {
+  font-family: "Merienda One", Arial, Helvetica, sans-serif;
+  font-size: 25px;
+  color: #000;
+  text-transform: uppercase;
+}
+
+/* add to basket button */
+.basket-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 220px;
+  height: 46px;
+  margin: 10px auto;
+  padding: 12px;
+  background-color: #000;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 10px;
+}
+
+/* pagination box */
+.swiper-custom-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5em 0;
+  margin: 2vh;
+}
+
+/* pagination bullet */
+.swiper-pagination-bullet {
+  position: relative;
+  width: 15px;
+  height: 15px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: transparent;
+  margin: 0 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 500ms ease-in;
+}
+/* pagination bullet active */
+.swiper-pagination-bullet-active {
+  background-color: var(--clr-hover);
+  width: 40px;
+  border-radius: 50px;
+}
+
+/*!===========  PRODUKT STYLING END  ============!*/
+
+/*!===========  PRODUKT SIDE STYLING START  ============!*/
+
+.produkt-side {
+  background-color: #fff;
+  color: #000;
+}
+
+.produkt-left-container {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100vh;
+}
+
+.side-billeder {
+  display: flex;
+  width: min-content;
+  height: 100vh;
+}
+
+.side-billede,
+.stor-billede {
+  height: 100%;
+  object-fit: cover;
+}
+
+.stor-billede {
+  order: 1;
+}
+
+.produkt-right-container {
+  position: relative;
+  display: grid;
+  justify-content: center;
+  padding: 0 1.5rem;
+}
+
+.top-title {
+  font-family: "Merienda One", Arial, Helvetica, sans-serif;
+  font-size: 2.1rem;
+  color: var(--clr-primary);
+  margin-top: 3vh;
+  text-transform: uppercase;
+}
+
+.top-text {
+  font-size: 1.4rem;
+  margin-top: 1rem;
+}
+
+.produkt-review {
+  display: flex;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+
+.produkt-review .fa-solid {
+  font-size: 1.5rem;
+}
+
+.reviews-amount {
+  font-size: 1.3rem;
+  margin-left: 0.7rem;
+}
+
+.dufte-box {
+  display: flex;
+  margin: 2rem 0 2rem 0;
+}
+
+.duft {
+  width: 3.7rem;
+  height: 3.7rem;
+  background-color: #007f5f;
+  margin: 0 0.4rem;
+  border-radius: 50%;
+  transition: 0.3s ease;
+}
+
+.duft:nth-child(1) {
+  background: var(--duft-appelsin);
+  margin: 0 0.4rem 0 0;
+}
+
+.duft:nth-child(2) {
+  background: var(--duft-citron);
+}
+
+.duft:nth-child(3) {
+  background: var(--duft-frisk);
+}
+
+.duft:nth-child(4) {
+  background: var(--duft-lakrids);
+}
+
+.duft:nth-child(5) {
+  background: var(--duft-mynte);
+}
+
+.duft:nth-child(6) {
+  background: var(--duft-vandmelon);
+}
+
+.duft:nth-child(7) {
+  background: var(--duft-æble);
+}
+
+.is-active {
+  outline: 2px solid #808080;
+  outline-offset: 2.5px;
+}
+
+.duft-beskrivelse {
+  font-size: 1.3rem;
+  font-weight: 300;
+  word-wrap: break-word;
+  width: 360px;
+}
+
+.duft-beskrivelse span {
+  font-weight: 600;
+}
+
+.funktion-beskrivelse {
+  font-size: 1.3rem;
+  font-weight: 300;
+  word-wrap: break-word;
+  width: 360px;
+  margin-top: 1rem;
+}
+
+.funktion-beskrivelse span {
+  font-weight: 600;
+}
+
+.godkendt {
+  font-size: 1.2rem;
+  color: #505050;
+  margin-top: 3rem;
+}
+
+.bestilling {
+  display: flex;
+  margin-top: 1rem;
+}
+
+.antal {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0rem 0.5rem;
+  border: 1px solid #cbcbcb;
+}
+
+#number {
+  font-size: 2rem;
+  font-weight: 700;
+  padding: 0.5rem 1rem;
+  border-right: 1px solid #cbcbcb;
+  border-left: 1px solid #cbcbcb;
+}
+
+#decrement {
+  padding-right: 0.5rem;
+  color: #808080;
+  border: none;
+  background-color: inherit;
+  cursor: pointer;
+}
+
+#increment {
+  padding-left: 0.5rem;
+  color: #808080;
+  border: none;
+  cursor: pointer;
+  background-color: inherit;
+}
+
+.kurv-knap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 210px;
+  width: 270px;
+  height: 3.7rem;
+  padding: 0 1rem;
+  margin: 0 0 0 2rem;
+  background-color: #000;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.kurv-text {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.kurv-pris {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #fff;
+  margin-left: 0.2rem;
+}
+
+.dropdown-bars {
+  margin: 2.5rem 0 3rem 0;
+  min-width: 300px;
+  width: 100%;
+}
+
+.dropdown-menu {
+  margin: 1rem 0;
+}
+
+.dropdown-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 360px;
+  width: 100%;
+  height: 4rem;
+  padding: 0 1.5rem;
+  background-color: #cbcbcb;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown-bar .fa-plus {
+  font-size: 1.2rem;
+}
+
+.bar-text {
+  font-size: 1.2rem;
+}
+
+.dropdown-box {
+  display: none;
+  max-width: 421px;
+  background-color: #cbcbcb;
+  padding: 0 1.5rem 1rem 1.5rem;
+  margin-bottom: 1rem;
+  overflow: hidden;
+}
+
+.dropdown-menu.show > .dropdown-box {
+  display: block;
+}
+
+.kvalitet-kasse {
+  display: flex;
+  padding: 1rem 0;
+  align-items: center;
+}
+
+.kvalitet-kasse-tekst {
+  display: flex;
+  flex-direction: column;
+}
+
+.kvalitet-billede {
+  width: 60px;
+  margin-right: 1rem;
+}
+
+.kvalitet-navn {
+  font-family: "Merienda One", Arial, Helvetica, sans-serif;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+
+.kvalitet-beskrivelse {
+  font-size: 1.2rem;
+  font-weight: 300;
+  color: #505050;
+}
+
+.bottom-list {
+  font-size: 1.2rem;
+  text-align: center;
+  color: #505050;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.guide-list {
+  list-style: decimal;
+  padding-left: 1.1rem;
+}
+
+.guide-text {
+  font-size: 1.2rem;
+  font-weight: 300;
+  padding: 1rem 0.3rem;
+  word-wrap: break-word;
+  width: 280px;
+}
+
+.warning {
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #505050;
+  margin-top: 1rem;
+  text-transform: uppercase;
+}
+
+.fordel {
+  font-size: 1.2rem;
+  font-weight: 300;
+  padding: 1rem 0;
+  word-wrap: break-word;
+  width: 280px;
+}
+
+.fordel span {
+  font-weight: 500;
+}
+
+/*!============  PRODUKT SIDE STYLING END  =============!*/
+
+/*!===========  ABOUT US STYLING START  ============!*/
+.about-us {
+  background-color: #fff;
+}
+
+.about-us-container {
+  width: 1140px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 80px 0;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+  width: 1040px;
+  justify-content: center;
+  align-items: center;
+}
+
+.row:nth-child(1) {
+  margin-bottom: 3rem;
+}
+
+.row:nth-child(2) {
+  margin-top: 3rem;
+}
+
+.about-photo {
+  width: 470px;
+  height: 513px;
+}
+
+.about-description {
+  padding: 0 0 0 40px;
+}
+
+.product-description {
+  padding: 0 40px 0 0;
+}
+
+.about-title {
+  font-family: "Merienda One";
+  font-size: 6rem;
+  color: #007f5f;
+}
+
+.about-text {
+  font-size: 3rem;
+  font-weight: 300;
+  color: #505050;
+  word-wrap: break-word;
+  width: 536px;
+}
+
+.about-photo > img {
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+/*!============  ABOUT US STYLING END  =============!*/
+
+/*!============  FOOTER STYLING START  =============!*/
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 0 20px 0;
+  flex-wrap: wrap;
+  background-color: black;
+}
+
+.fa-instagram {
+  background-color: red;
+  background-image: linear-gradient(#a700ff, #fdb902);
+  background-size: 100%;
+  background-repeat: repeat;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+}
+
+.fa-facebook {
+  background-color: blue;
+  background-image: blue;
+  background-size: 100%;
+  background-repeat: repeat;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+}
+
+.fa-youtube {
+  background-color: red;
+  background-image: red;
+  background-size: 100%;
+  background-repeat: repeat;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+}
+
+.footer-contacs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-logo {
+  width: 105px;
+  display: block;
+  margin-bottom: 30px;
+}
+
+address,
+.footer-text {
+  font-style: normal;
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.social-media {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.participate-text {
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+#email {
+  display: block;
+  width: 85vw;
+  color: #dddddd;
+  margin-bottom: 30px;
+  padding: 15px;
+  font-size: 22px;
+  border: none;
+}
+
+#checkbox {
+  width: 20px;
+  height: 20px;
+}
+
+.checkbox-agreement {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.agreement-text {
+  font-size: 1rem;
+}
+
+.submit-btn {
+  width: 105px;
+  height: 40px;
+  padding: 5px;
+  font-size: 18px;
+  border-radius: 0;
+  border: none;
+}
+
+.submit-form {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.handelsbetingelser-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 26px;
+}
+
+.white-line {
+  color: #fff;
+  width: 85%;
+  margin: 20px auto 5px;
+}
+
+/*!=============  FOOTER STYLING END  ==============!*/
+
+/*?--------------------------------------------------------------?*\
+......................... DESKTOP VERSION .........................
+/*?--------------------------------------------------------------?*/
+
+@media (min-width: 768px) {
+  /*!===========  NAVBAR STYLING START  ============!*/
+  .navbar {
+    transition: all 0.4s ease;
+    padding: 10px 50px;
+  }
+
+  .navbar.scroll {
+    top: -200px;
+    transition: 1.5s ease;
+  }
+
+  .nav-menu {
+    position: relative;
+    flex-direction: row;
+    align-items: center;
+    left: 0;
+    background-color: transparent;
+    transition: all 0.3s ease;
+  }
+
+  .nav-link {
+    font-size: 1.5rem;
+  }
+
+  .nav-link:hover {
+    color: var(--clr-txt-hover);
+    transition: 0.3s ease;
+  }
+
+  .nav-icons .fa-solid:hover {
+    cursor: pointer;
+    color: var(--clr-hover);
+    transition: 0.3s ease;
+  }
+
+  .nav-hidden {
+    display: flex;
+  }
+
+  .hamburger {
+    display: none;
+  }
+  /*!============  NAVBAR STYLING END  =============!*/
+}
+
+/*!============  HEADER STYLING START  =============!*/
+
+@media (min-width: 768px) {
+  .header {
+    display: flex;
+    justify-content: center;
+  }
+
+  .header-bg {
+    height: 678px;
+    z-index: 99;
+  }
+
+  .header-dv {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  .h-img-dv {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(60%);
+  }
+
+  .h-img-mv {
+    display: none;
+  }
+
+  /* Fading animation */
+  .fade {
+    animation-name: fade;
+    animation-duration: 2s;
+  }
+
+  @keyframes fade {
+    from {
+      opacity: 0.9;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  /**********? HEADER TEXT ?**********/
+
+  .header-text {
+    max-width: 1140px;
+    min-width: 0;
+    width: 100%;
+    display: block;
+  }
+
+  .header-title {
+    font-size: 7rem;
+  }
+
+  .header-btn {
+    font-size: 2.5rem;
+    width: 18rem;
+    height: 6rem;
+    margin-top: 5rem;
+  }
+
+  .header-btn:hover {
+    background-color: var(--clr-hover);
+    transition: 0.3s ease;
+  }
+
+  .tilmeldt-box {
+    padding: 0 15rem;
+  }
+}
+/*!=============  HEADER STYLING END  ==============!*/
+
+/*!=============  INTRO STYLING START  ==============!*/
+
+@media (min-width: 768px) {
+  .intro {
+    height: 60vh;
+  }
+
+  .intro-title {
+    font-size: 5rem;
+  }
+
+  .intro-text {
+    font-size: 2.8rem;
+    width: 550px;
+  }
+}
+
+/*!==============  INTRO STYLING END  ===============!*/
+
+/*!============  KVALITET STYLING START  =============!*/
+
+.kvalitet {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 60vh;
+  background-color: var(--clr-sand);
+  transition: 0.5s ease;
+}
+
+.kvalitet-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1140px;
+  width: 100%;
+  height: 50vh;
+  align-self: end;
+}
+
+.kvalitet-title {
+  position: absolute;
+  margin: 7vh auto;
+  font-family: "Merienda One";
+  font-size: 5rem;
+  color: #000;
+  text-transform: uppercase;
+}
+
+.kvalitet-box {
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  text-align: center;
+  width: 260px;
+  height: 250px;
+}
+
+.kvalitet-name {
+  font-family: "Merienda One", Arial, Helvetica, sans-serif;
+  font-size: 2rem;
+  color: #000;
+  margin: 2rem 0;
+  text-transform: uppercase;
+}
+
+.kvalitet-text {
+  font-size: 2rem;
+  font-weight: 300;
+  color: #505050;
+  word-wrap: break-word;
+  width: 230px;
+}
+
+/*!=============  KVALITET STYLING END  ==============!*/
+
+@media (min-width: 920px) {
+  /*!==========  PRODUKT STYLING START  ===========!*/
+  .custom-swiper {
+    position: relative;
+    width: 920px;
+    height: 580px;
+    margin: 0 auto;
+    bottom: 20px;
+    overflow: hidden;
+  }
+
+  .product-title {
+    font-size: 50px;
+    width: 100%;
+  }
+
+  .product-text {
+    font-size: 25px;
+    width: 500px;
+  }
+
+  .basket-btn:hover {
+    background-color: var(--clr-hover);
+    transition: 0.3s ease;
+  }
+  /*!===========  PRODUKT STYLING END  ============!*/
+}
+
+@media (max-width: 1140px) {
+  /*!============  ABOUT US, KVALITET AND NAVBAR STYLING START  =============!*/
+  .about-us,
+  .kvalitet,
+  .nav-hidden {
+    display: none;
+  }
+  /*!=============  ABOUT US, KVALITET AND NAVBAR STYLING END  ==============!*/
+}
+
+@media (min-width: 749px) {
+  /*!===========  PRODUKT SIDE STYLING START  ============!*/
+
+  .produkt-right-container {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  /*!============  PRODUKT SIDE STYLING END  =============!*/
+}
+
+@media (min-width: 1140px) {
+  /*!===========  PRODUKT SIDE STYLING START  ============!*/
+
+  .produkt-side {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .produkt-side-container {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    max-width: 1140px;
+    width: 100%;
+  }
+
+  .produkt-left-container {
+    align-items: center;
+    width: fit-content;
+  }
+
+  .fokus-billede {
+    position: relative;
+    margin: 0 3rem 0 2rem;
+    width: 450px;
+    height: 546px;
+  }
+
+  .stor-billede {
+    width: 100%;
+    height: 546px;
+  }
+
+  .side-billeder {
+    flex-direction: column;
+    width: 104px;
+    height: 546px;
+  }
+
+  .side-billede {
+    position: relative;
+    width: 100%;
+    height: 129px;
+    margin: 0.5rem 0;
+    border: 2px solid var(--clr-primary);
+    cursor: pointer;
+  }
+
+  .side-billede:nth-child(1) {
+    margin-top: 0;
+  }
+
+  .side-billede:nth-child(4) {
+    margin-bottom: 0;
+  }
+
+  .produkt-right-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 13.5%;
+    padding: 0 0 2rem 0;
+  }
+
+  .top-title {
+    font-size: 2.7rem;
+    margin-top: 0;
+  }
+
+  .top-text {
+    font-size: 1.5rem;
+  }
+
+  .dufte-box {
+    margin: 3rem 0 2rem 0;
+  }
+  .duft {
+    width: 4.3rem;
+    height: 4.3rem;
+    margin: 0 0.8rem;
+  }
+
+  .duft:nth-child(1) {
+    margin: 0 0.8rem 0 0;
+  }
+
+  .kurv-knap {
+    width: 100%;
+    margin: 0 2rem 0 2rem;
+  }
+
+  .kurv-knap:hover {
+    background-color: var(--clr-hover);
+    transition: 0.3s ease;
+  }
+
+  .dropdown-bars {
+    /* position: absolute; */
+    margin: 3rem 0 0 0;
+  }
+
+  .dropdown-menu:nth-child(3) {
+    margin-bottom: 0;
+  }
+
+  .dropdown-bar {
+    max-width: 421px;
+  }
+  /*!============  PRODUKT SIDE STYLING END  =============!*/
+}
+
+@media screen and (max-width: 767px) {
+  .footer-links {
+    display: none;
+  }
+
+  footer {
+    justify-content: center;
+  }
+
+  .submit-btn.desktop {
+    display: none;
+  }
+
+  .copyright {
+    text-align: center;
+  }
+
+  .copyright.desktop {
+    display: none;
+  }
+
+  .desktop-tilmeld {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    font-size: 22px;
+    font-weight: 400;
+  }
+
+  .footer-link {
+    display: block;
+    margin-bottom: 14px;
+  }
+
+  #email {
+    width: 340px;
+    margin-bottom: 0;
+    padding: 6px;
+  }
+
+  .desktop-footer {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1140px;
+    width: 100%;
+  }
+
+  .footer-logo {
+    width: 160px;
+  }
+
+  address,
+  .footer-text {
+    font-style: normal;
+    font-size: 2rem;
+    text-align: start;
+  }
+
+  .social-media {
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 0;
+    gap: 25px;
+    margin-left: -12px;
+  }
+
+  .participate-text {
+    text-align: start;
+  }
+
+  .tilmeld {
+    display: none;
+  }
+
+  .submit-btn.mobile {
+    display: none;
+  }
+
+  .desktop-input {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 50px;
+  }
+
+  .submit-btn.desktop {
+    width: 120px;
+    font-size: 22px;
+    padding: 8px;
+  }
+
+  #checkbox {
+    width: 25px;
+    height: 25px;
+  }
+
+  .agreement-text {
+    font-size: 14px;
+  }
+
+  .accept {
+    display: none;
+  }
+
+  .desktop-copyright {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1140px;
+    width: 100%;
+    margin: 0 auto;
+    font-size: 16px;
+    gap: 50px;
+  }
+
+  .copyright.mobile {
+    display: none;
+  }
+
+  .handelsbetingelser-links {
+    gap: 15px;
+    margin-bottom: 0;
+  }
+
+  .white-line {
+    max-width: 1140px;
+    width: 100%;
+  }
+}
